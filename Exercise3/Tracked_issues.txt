@@ -1,0 +1,28 @@
+This json object located in the Brands.json file contains an escape charater for "Big G" witch is causing \copy command to fail with error invalid input syntax for type json.
+To fix this error I added an addition backslash along side the original. This allowed the copy command for work without fail.
+{"_id":{"$oid":"5dc07e2aa60b873d6b0666d1"},"name":"General Mills \"Big G\" Cereal","cpg":{"$ref":"Cogs","$id":{"$oid":"53e10d6368abd3c7065097cc"}},"barcode":"511111006305","brandCode":"GENERAL MILLS CEREAL"}
+
+Users.json contain 70 of the 212 users had duplicate records. This will cause issues because _id is a unique column in the users table.
+
+purchasedItemCount doesn't match the item count in the rewardsReceiptItemList: Need to confirm this.
+
+I setup a Foreign Key Constraint on Reciepts table for the userId referencing the Users table _id.
+When I stated inserting the data I got an the following error. insert or update on table "Receipts" violates foreign key constraint "users_fkey"
+I decide to remove the constraint and run the following query to check if there where receipts.userId that didn't exist in the users table.
+select count(*)
+from "Receipts"
+where "userId" not in (select _Id
+                       from users)
+this returned a 148 receipts that didn't have users in the users table.
+There are two ways I can fix this
+ 1. Removed the Receipts that do not have matching userid in the users table.
+ 2. Create users for those receipts.
+ 
+#Brands Data Issues:
+The Brands data that was provided had the following issues
+ - 234 records had the BrandCode null this will affect the results of the Report to find the Top 5 Brands by Receipt scanned for most recent month.
+ - I found barcode data in BrandCode column
+ - I think the BrandCode should be more consistant.
+ - I would like to have more information as to how the BrandCode column is populated.
+ 
+ 

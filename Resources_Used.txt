@@ -1,0 +1,38 @@
+Resources
+This information was helpful for understanding how to parse the json files.
+https://www.oreilly.com/library/view/practical-postgresql/9781449309770/ch04s03.html
+https://www.postgresql.org/docs/current/functions-json.html
+https://www.postgresql.org/docs/12/functions-json.html
+https://www.postgresql.org/docs/14/datatype-json.html
+https://www.sqliz.com/postgresql-ref/jsonb_array_elements/
+
+
+Needed to know how to convert Unix epoch to a date. I found this link useful for solving it.
+https://stackoverflow.com/questions/16609722/postgresql-how-to-convert-from-unix-epoch-to-date
+
+Coming from a oracle background I noticed that Dates are handled differently. This documentation helped me understand it better.
+https://www.postgresql.org/docs/current/functions-datetime.html
+https://stackoverflow.com/questions/6133107/extract-date-yyyy-mm-dd-from-a-timestamp-in-postgresql
+https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-date/
+
+Understanding Relational Databases.
+https://www.guru99.com/relational-data-model-dbms.html
+https://www.altexsoft.com/blog/structured-unstructured-data/
+
+Understanding PostgreSQL & PL/pgSQL
+https://www.postgresql.org/docs/current/plpgsql-statements.html#PLPGSQL-STATEMENTS-EXECUTING-DYN
+https://www.postgresql.org/docs/current/uuid-ossp.html
+https://www.postgresqltutorial.com/postgresql-plpgsql/postgresql-create-function/
+https://www.postgresqltutorial.com/postgresql-plpgsql/plpgsql-variables/
+https://tableplus.com/blog/2018/04/postgresql-how-to-list-all-available-columns.html
+
+It's been a while since I've worked with python these sites helped.
+https://realpython.com/
+https://www.geeksforgeeks.org/read-json-file-using-python/
+https://stackoverflow.com/questions/21058935/python-json-loads-shows-valueerror-extra-data
+https://stackoverflow.com/questions/1871524/how-can-i-convert-json-to-csv
+
+Used the pandas documentation for exploring the data for quality issues and cleaning the data.
+https://pandas.pydata.org/docs/
+https://stackoverflow.com/questions/19231871/convert-unix-time-to-readable-date-in-pandas-dataframe
+https://elizabethdgroot.medium.com/practice-data-quality-with-python-numpy-and-pandas-da2053fb0114
